@@ -11,6 +11,14 @@ def index(request):
     index函数负责查询页面中需要展示的商品内容，
     主要是每类最新的4种商品和4中点击率最高的商品，
     每类商品需要查询2次
+
+    2
+    4
+    1
+    5
+    3
+    6
+
     """
     count = request.session.get('count')
     fruit = GoodsInfo.objects.filter(gtype__id=2).order_by("-id")[:4]
