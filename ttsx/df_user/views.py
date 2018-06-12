@@ -136,7 +136,7 @@ def site(request):
     context = {'title': '用户中心', 'user': user,'page_name':1,'site':1}
     return render(request, 'df_user/user_center_site.html', context)
 
-
+#退出，直接跳转到根目录
 def logout(request):
     request.session.flush()
     return redirect('/')
