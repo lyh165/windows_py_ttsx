@@ -18,7 +18,11 @@ def index(request):
     5
     3
     6
-
+    获取数据 ，因为模型类 已经映射到数据库
+    所以通过模型类 就可以操作数据库每张表的数据，
+    通过模型对象去操作、获取数据
+    fruit = GoodsInfo.objects.filter(gtype__id=2).order_by("-id")[:4]
+        上面的意思是 通过GoodInfo获取gtypeid=2的分类获取商品并且分组获取出来 id 前面4条数据
     """
     count = request.session.get('count')
     fruit = GoodsInfo.objects.filter(gtype__id=2).order_by("-id")[:4]
