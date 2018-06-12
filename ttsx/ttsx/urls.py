@@ -24,6 +24,8 @@ urlpatterns = [
     url(r'^order/', include('df_order.urls')),
     url(r'^tinymce/', include('tinymce.urls')),
     url(r'^', include('df_goods.urls', namespace='goods')),
+    url(r'^search/',include('haystack.urls')),
+
     # url(r'^search/', search_views.MySeachView(), name='haystack_search'),
 
 ]

@@ -142,3 +142,18 @@ def detail(request,id):
     response.set_cookie('goods_ids',goods_ids)
 
     return response
+
+#购物车数量
+# def cart_count(request):
+#     if request.session.has_key('user_id'):
+#         return CartInfo.objects.filter(user_id=request.session['user_id'])
+#     else:
+#         return 0;
+#
+# from haystack.views import SearchView
+# class MysearchView(SearchView):
+#     def extra_context(self):
+#         content = super(MysearchView,self).extra_context()
+#         content['title'] = '搜索'
+#         content['guest_cart'] = 1
+#         content['cart_count'] = cart_count(self.request)
